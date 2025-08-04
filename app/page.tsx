@@ -613,7 +613,7 @@ export default function TechServicesNano() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-lg font-semibold text-green-600">
-                    <Link href="tel:+1234567890">+1 (530) 902-5860</Link>
+                    <Link href="tel:+1234567890">+1 (541) 357-9862</Link>
                   </p>
                 </CardContent>
               </Card>
