@@ -612,8 +612,7 @@ export default function TechServicesNano() {
                   <CardDescription>Business hours: 9am - 5pm</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-lg font-semibold text-green-600">
-                    <Link href="tel:+1234567890">+1 (541) 357-9862</Link>
+                  <p className="text-lg font-semibold text-green-600">                    <Link href="tel:+1234567890">+1 (541) 357-9862</Link>
                   </p>
                 </CardContent>
               </Card>
@@ -629,7 +628,7 @@ export default function TechServicesNano() {
                 </CardHeader>
                 <CardContent className="space-x-4">
                   <a
-                    href="https://www.linkedin.com/in/nadine-ibrahim-1a794646/"
+                    href="https://www.linkedin.com/in/nano-ibrahim-298243388/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg font-semibold text-orange-600 hover:underline"
@@ -637,20 +636,27 @@ export default function TechServicesNano() {
                     LinkedIn
                   </a>
                   <a
-                    href="https://github.com/NanoNanoDesigns"
+                    href="https://www.github.com/NanoNanoDesigns/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg font-semibold text-orange-600 hover:underline"
                   >
                     GitHub
                   </a>
+                  <a
+                    href="https://www.instagram.com/techservicesnano/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg font-semibold text-orange-600 hover:underline"
+                  >
+                    Instagram
+                    </a>
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
       </main>
-
       {/* Footer */}
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-muted-foreground">
