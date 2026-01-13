@@ -1,3 +1,6 @@
+import { paymentConfig } from "./config"
+import { SquarePaymentProcessor } from "./payment-providers/square"
+
 export interface PaymentProcessor {
   processPayment(
     amount: number,
@@ -28,7 +31,17 @@ export class MockPaymentProcessor implements PaymentProcessor {
   }
 }
 
-// In production, swap this with real payment processor
+/**
+ * Get the configured payment processor based on environment variables
+ * Supports: mock, square
+ * Add more providers by extending this factory
+ */
 export function getPaymentProcessor(): PaymentProcessor {
-  return new MockPaymentProcessor()
+  switch (paymentConfig.provider) {
+    case "square":
+      return new SquarePaymentProcessor()
+    case "mock":
+    default:
+      return new MockPaymentProcessor()
+  }
 }

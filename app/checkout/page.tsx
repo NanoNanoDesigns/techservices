@@ -44,21 +44,43 @@ export default function CheckoutPage() {
     setOrderStatus("processing")
 
     try {
-      // Simulate payment processing
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      // Process payment via API route
+      const response = await fetch("/api/process-payment", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          amount: cartTotal,
+          currency: "USD",
+          customerName: formData.customerName,
+          customerEmail: formData.customerEmail,
+          shippingAddress: formData.shippingAddress,
+          items: [
+            // Sample items - in production, these would come from actual cart
+            { productId: "2", name: "Mechanical Keyboard", price: 89.99, quantity: 1 },
+            { productId: "3", name: "Wireless Mouse", price: 34.99, quantity: 1 },
+            { productId: "1", name: "USB-C Hub", price: 49.99, quantity: 1 },
+          ],
+        }),
+      })
 
-      // Simulate 80% success rate for demo
-      if (Math.random() < 0.8) {
+      const result = await response.json()
+
+      if (result.success) {
         setOrderStatus("success")
-        // In production, you would save the order here
-        console.log("Order placed:", { ...formData, total: cartTotal })
+        console.log("Order placed successfully:", {
+          orderId: result.orderId,
+          transactionId: result.transactionId,
+        })
       } else {
         setOrderStatus("error")
-        setErrorMessage("Payment declined. Please try another payment method.")
+        setErrorMessage(result.error || "Payment processing failed. Please try again.")
       }
     } catch (error) {
       setOrderStatus("error")
       setErrorMessage("An error occurred while processing your order.")
+      console.error("Payment error:", error)
     } finally {
       setIsProcessing(false)
     }
