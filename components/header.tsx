@@ -23,10 +23,10 @@ export function Header() {
             Services
           </Link>
           <Link
-            href="/#about"
+            href="/#pricing"
             className="transition-colors hover:text-foreground/80"
           >
-            About
+            Pricing
           </Link>
           <Link href="/documents" className="transition-colors hover:text-foreground/80">
             Documents

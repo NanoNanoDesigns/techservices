@@ -6,21 +6,38 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
-  Brain,
+  // Brain,
   Monitor,
   Wrench,
   Download,
-  // GraduationCap, // Uncomment when tutoring services are offered
+  // Globe,
+  // ShieldCheck,
   Users,
-  Globe,
-  Network,
   Phone,
   Mail,
   CheckCircle,
   ArrowRight,
-  ShieldCheck,
   XCircle,
+  Gauge,
+  ShieldAlert,
+  RotateCcw,
+  MonitorSmartphone,
+  Printer,
+  Wifi,
+  HardDrive,
+  MailOpen,
+  Clock,
+  Stethoscope,
+  BadgeCheck,
+  KeyRound,
+  AlertTriangle,
+  Cpu,
+  Heart,
+  Home,
+  ArrowUpRight,
+  ShieldOff,
 } from "lucide-react";
 import Link from "next/link";
 import { Header } from "@/components/header";
@@ -28,67 +45,130 @@ import { Header } from "@/components/header";
 export default function TechServicesNano() {
   const services = [
     {
-      icon: <Monitor className="h-8 w-8" />,
-      title: "Computer Repair",
+      icon: <Gauge className="h-8 w-8" />,
+      title: "Computer Tune-Up / Performance Optimization",
+      price: "$60",
       description:
-        "Professional diagnosis and repair of desktops, laptops, and all-in-one computers. Hardware and software troubleshooting.",
+        "Restore your computer to peak performance with a comprehensive tune-up.",
+      includes: [
+        "Startup optimization",
+        "Disk cleanup and defragmentation",
+        "Software updates",
+        "Performance assessment",
+      ],
     },
-    // {
-    //   icon: <Wrench className="h-8 w-8" />,
-    //   title: "Console Repair",
-    //   description:
-    //     "Expert repair services for gaming consoles including PlayStation, Xbox, Nintendo Switch, and retro gaming systems.",
-    // },
+    {
+      icon: <ShieldAlert className="h-8 w-8" />,
+      title: "Basic Malware Removal",
+      price: "$75",
+      description:
+        "Remove viruses, adware, and other malicious software from your system.",
+      includes: [
+        "Full system scan",
+        "Malware and adware removal",
+        "Browser cleanup",
+        "Security recommendations",
+      ],
+    },
+    {
+      icon: <RotateCcw className="h-8 w-8" />,
+      title: "Operating System Reinstall",
+      price: "$95",
+      description:
+        "Fresh OS installation when your system needs a clean start.",
+      includes: [
+        "Clean OS installation",
+        "Driver installation",
+        "Windows/macOS updates",
+        "Basic configuration",
+      ],
+    },
+    {
+      icon: <MonitorSmartphone className="h-8 w-8" />,
+      title: "New Computer Setup",
+      price: "$75",
+      description:
+        "Get your new computer ready to use right out of the box.",
+      includes: [
+        "Initial setup and user account creation",
+        "Software installation",
+        "Email configuration",
+        "Data migration assistance",
+      ],
+    },
     {
       icon: <Download className="h-8 w-8" />,
       title: "Software Installation",
+      price: "$45",
       description:
-        "Operating system installation, software setup, driver updates, and system optimization for peak performance.",
-    },
-    // {
-    //   icon: <GraduationCap className="h-8 w-8" />,
-    //   title: "Tutoring",
-    //   description:
-    //     "One-on-one technology tutoring for individuals looking to improve their computer skills and digital literacy.",
-    // },
-    // {
-    //   icon: <Users className="h-8 w-8" />,
-    //   title: "Corporate Training",
-    //   description:
-    //     "Professional training sessions for businesses on software usage, cybersecurity, and digital workflow optimization.",
-    // },
-    {
-      icon: <Globe className="h-8 w-8" />,
-      title: "Website Design",
-      description:
-        "Custom website development and design services for businesses looking to establish their online presence.",
+        "Professional installation and configuration of your software.",
+      includes: [
+        "Software installation",
+        "License activation",
+        "Basic configuration",
+        "Compatibility verification",
+      ],
     },
     {
-      icon: <Network className="h-8 w-8" />,
-      title: "Networking Solutions",
+      icon: <MailOpen className="h-8 w-8" />,
+      title: "Email Setup / Configuration",
+      price: "$45",
       description:
-        "Network setup, configuration, and troubleshooting for homes and businesses. Wi-Fi optimization and security.",
+        "Set up or configure email on your computer, phone, or tablet.",
+      includes: [
+        "Email client setup",
+        "Account configuration",
+        "Contact and calendar sync",
+        "Basic troubleshooting",
+      ],
     },
     {
-      icon: <ShieldCheck className="h-8 w-8" />,
-      title: "Cybersecurity Services",
+      icon: <Printer className="h-8 w-8" />,
+      title: "Printer Setup",
+      price: "$45",
       description:
-        "Comprehensive security assessments, vulnerability testing, and threat mitigation strategies to protect your business.",
+        "Get your printer connected and working with all your devices.",
+      includes: [
+        "Printer installation",
+        "Driver setup",
+        "Network/wireless configuration",
+        "Test printing",
+      ],
     },
     {
-      icon: <Brain className="h-8 w-8" />,
-      title: "AI solutions",
+      icon: <Wifi className="h-8 w-8" />,
+      title: "Router / Wi-Fi Setup",
+      price: "$75",
       description:
-        "Implementing AI-driven tools and solutions to enhance business operations, customer engagement, and data analysis.",
+        "Set up or optimize your home or small-office wireless network.",
+      includes: [
+        "Router installation and configuration",
+        "Wi-Fi network setup",
+        "Security configuration",
+        "Device connectivity testing",
+      ],
+    },
+    {
+      icon: <HardDrive className="h-8 w-8" />,
+      title: "Basic Data Transfer",
+      price: "$95",
+      description:
+        "Safely move your files, photos, and documents between devices.",
+      includes: [
+        "File and folder transfer",
+        "Photo and document migration",
+        "Transfer verification",
+        "Basic organization",
+      ],
     },
   ];
 
   const features = [
-    "Fast turnaround times",
-    "Competitive pricing",
-    "Quality guarantee",
-    "On-site service available",
-    "Free diagnostics",
+    "Free basic diagnostics",
+    "Transparent flat-rate pricing",
+    "90-day service guarantee",
+    "Ethical, practical repairs",
+    "Home & small-business focused",
   ];
 
   return (
@@ -106,11 +186,18 @@ export default function TechServicesNano() {
                   <span className="block text-primary">You Can Trust</span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  Tech Services Nano provides comprehensive IT and repair solutions for
-                  individuals and businesses. From computer repair to website
-                  design, we handle your technology needs with expertise and
-                  care.
+                  Ethical, practical computer repair and IT support with
+                  transparent flat-rate pricing. Free basic diagnostics on every
+                  visit and a 90-day guarantee on all repairs.
                 </p>
+              </div>
+              <div className="flex flex-wrap justify-center gap-2 max-w-lg">
+                {features.map((feature, index) => (
+                  <Badge key={index} variant="secondary" className="text-sm">
+                    <CheckCircle className="mr-1 h-3 w-3" />
+                    {feature}
+                  </Badge>
+                ))}
               </div>
               <div className="space-x-4">
                 <Button
@@ -131,7 +218,72 @@ export default function TechServicesNano() {
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Our Approach Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Our Approach
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Honest computer repair focused on what you actually need — not
+                  what makes us the most money
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-4xl gap-6 py-12 md:grid-cols-2 lg:gap-8">
+              <div className="flex gap-4">
+                <Heart className="h-8 w-8 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold">
+                    Ethical &amp; Practical
+                  </h3>
+                  <p className="text-muted-foreground">
+                    We recommend only the repairs you actually need. No
+                    upselling, no unnecessary services, no pressure.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <Home className="h-8 w-8 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold">
+                    Home &amp; Small-Business Focused
+                  </h3>
+                  <p className="text-muted-foreground">
+                    We specialize in helping everyday users and small businesses
+                    with practical, affordable tech support.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <ArrowUpRight className="h-8 w-8 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold">
+                    Honest Referrals
+                  </h3>
+                  <p className="text-muted-foreground">
+                    If a job is outside our scope, we&apos;ll tell you upfront
+                    and refer you to a specialist who can help.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <ShieldOff className="h-8 w-8 text-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold">No Upselling</h3>
+                  <p className="text-muted-foreground">
+                    We won&apos;t push products or services you don&apos;t need.
+                    Our goal is to solve your problem, not grow your bill.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Flat Rate Service Menu */}
         <section
           id="services"
           className="w-full py-12 md:py-24 lg:py-32 bg-muted/50"
@@ -140,27 +292,43 @@ export default function TechServicesNano() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Services
+                  Flat Rate Service Menu
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We offer a range of IT and repair services to meet all your
-                  technology needs
+                  Transparent, fixed pricing for common computer repair and
+                  setup services — no surprises, no hidden fees
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 xl:grid-cols-3 lg:gap-8">
+            <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-2 xl:grid-cols-3 lg:gap-8">
               {services.map((service, index) => (
                 <Card key={index} className="relative overflow-hidden">
                   <CardHeader>
-                    <div className="flex items-center space-x-2">
-                      <div className="text-primary">{service.icon}</div>
-                      <CardTitle className="text-xl">{service.title}</CardTitle>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-2">
+                        <div className="text-primary">{service.icon}</div>
+                        <CardTitle className="text-lg">
+                          {service.title}
+                        </CardTitle>
+                      </div>
+                      <Badge className="text-sm font-bold shrink-0">
+                        {service.price}
+                      </Badge>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-base">
+                    <CardDescription className="text-base mb-3">
                       {service.description}
                     </CardDescription>
+                    <div className="text-sm font-medium mb-2">Includes:</div>
+                    <ul className="space-y-1 text-sm text-muted-foreground">
+                      {service.includes.map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-3 w-3 text-primary shrink-0" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </CardContent>
                 </Card>
               ))}
@@ -168,188 +336,49 @@ export default function TechServicesNano() {
           </div>
         </section>
 
-        {/* Tutoring & Training Section - Uncomment when tutoring services are offered
+        {/* Diagnostic Services Section */}
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Tutoring & Training Programs
+                  Diagnostic Services
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Personalized learning experiences designed to boost your
-                  technology skills and confidence
+                  Every repair starts with understanding the problem — our
+                  diagnostics help identify the right fix
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-6xl gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-              <div className="space-y-6">
-                <Card>
-                  <CardHeader>
-                    <div className="flex items-center space-x-2">
-                      <GraduationCap className="h-6 w-6 text-primary" />
-                      <CardTitle>Individual Tutoring</CardTitle>
+            <div className="mx-auto grid max-w-4xl gap-6 py-12 md:grid-cols-2 lg:gap-8">
+              <Card>
+                <CardHeader className="text-center">
+                  <Stethoscope className="h-8 w-8 mx-auto text-primary" />
+                  <CardTitle className="text-2xl">
+                    Free Basic Diagnostic
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-600">
+                      Free
                     </div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-muted-foreground">
-                      One-on-one personalized sessions tailored to your specific
-                      learning needs and pace.
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                        <span>Computer basics and digital literacy</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                        <span>
-                          Microsoft Office Suite (Word, Excel, PowerPoint)
-                        </span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                        <span>Internet safety and email management</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                        <span>Social media and online communication</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                        <span>Smartphone and tablet usage</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <div className="flex items-center space-x-2">
-                      <Users className="h-6 w-6 text-primary" />
-                      <CardTitle>Group Training</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-muted-foreground">
-                      Cost-effective group sessions perfect for families, senior
-                      centers, or small businesses.
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                        <span>Senior-friendly technology workshops</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                        <span>Family digital safety sessions</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                        <span>Small business software training</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                        <span>Cybersecurity awareness workshops</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </div>
-              <div className="space-y-6">
-                <Card>
-                  <CardHeader>
-                    <div className="flex items-center space-x-2">
-                      <Globe className="h-6 w-6 text-primary" />
-                      <CardTitle>Corporate Training</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-muted-foreground">
-                      Professional development programs to enhance your team's
-                      technical capabilities.
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                        <span>Software implementation and adoption</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                        <span>Digital workflow optimization</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                        <span>Cybersecurity best practices</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                        <span>Cloud services and collaboration tools</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                        <span>Custom training programs</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-                <div className="bg-primary/10 p-6 rounded-lg space-y-4">
-                  <h3 className="text-xl font-bold">
-                    Training Formats Available
-                  </h3>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="space-y-2">
-                      <h4 className="font-semibold">In-Person</h4>
-                      <p className="text-muted-foreground">
-                        At your location or our office
-                      </p>
-                    </div>
-                    <div className="space-y-2">
-                      <h4 className="font-semibold">Remote</h4>
-                      <p className="text-muted-foreground">
-                        Via video conferencing
-                      </p>
-                    </div>
-                    <div className="space-y-2">
-                      <h4 className="font-semibold">Hybrid</h4>
-                      <p className="text-muted-foreground">
-                        Combination of both formats
-                      </p>
-                    </div>
-                    <div className="space-y-2">
-                      <h4 className="font-semibold">Flexible</h4>
-                      <p className="text-muted-foreground">
-                        Scheduled around your needs
-                      </p>
+                    <div className="text-sm text-muted-foreground">
+                      up to 15 minutes
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        */}
-
-        {/* Pricing Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Transparent Pricing
-                </h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Fair, competitive rates with no hidden fees. Quality service
-                  at affordable prices.
-                </p>
-              </div>
-            </div>
-            {/* When tutoring is offered, change to: <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3 lg:gap-8"> */}
-            <div className="mx-auto max-w-md py-12">
-              <Card className="relative">
+                  <p className="text-muted-foreground text-center">
+                    Initial inspection to assess the issue and provide a
+                    recommendation. Included with every service visit.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
                 <CardHeader className="text-center">
-                  <Wrench className="h-8 w-8 mx-auto text-primary" />
-                  <CardTitle className="text-2xl">Repair Services</CardTitle>
-                  <CardDescription>Computer & console repair</CardDescription>
+                  <Clock className="h-8 w-8 mx-auto text-primary" />
+                  <CardTitle className="text-2xl">
+                    Advanced Diagnostic
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="text-center">
@@ -361,24 +390,86 @@ export default function TechServicesNano() {
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Free initial diagnosis</span>
+                      <span>Device disassembly and inspection</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Parts at cost + 10%</span>
+                      <span>Extended hardware and software testing</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>90-day warranty on repairs</span>
+                      <span>Software analysis and hardware tracing</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>On-site service available</span>
+                      <span>Research and documentation</span>
                     </li>
-                    {/* <li className="flex items-center gap-2">
+                  </ul>
+                  <div className="text-xs text-muted-foreground text-center pt-2">
+                    Requires customer authorization before proceeding.
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Hourly Services / Pricing Section */}
+        <section
+          id="pricing"
+          className="w-full py-12 md:py-24 lg:py-32 bg-muted/50"
+        >
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Hourly Services
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  For general technical work not covered by our flat-rate
+                  service menu
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto max-w-md py-12">
+              <Card className="relative">
+                <CardHeader className="text-center">
+                  <Wrench className="h-8 w-8 mx-auto text-primary" />
+                  <CardTitle className="text-2xl">
+                    General Technical Work
+                  </CardTitle>
+                  <CardDescription>
+                    Flexible hourly rate for custom jobs
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold">$50</div>
+                    <div className="text-sm text-muted-foreground">
+                      per hour
+                    </div>
+                  </div>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Emergency service options</span>
-                    </li> */}
+                      <span>Hardware cleaning</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <span>Minor hardware repair</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <span>System troubleshooting</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <span>Device inspection</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <span>General technical assistance</span>
+                    </li>
                   </ul>
                   <div className="pt-4">
                     <div className="text-xs text-muted-foreground text-center">
@@ -388,182 +479,193 @@ export default function TechServicesNano() {
                   </div>
                 </CardContent>
               </Card>
-
-              {/* Individual Tutoring pricing card - Uncomment when tutoring services are offered
-              <Card className="relative">
-                <CardHeader className="text-center">
-                  <GraduationCap className="h-8 w-8 mx-auto text-primary" />
-                  <CardTitle className="text-2xl">
-                    Individual Tutoring
-                  </CardTitle>
-                  <CardDescription>
-                    One-on-one personalized sessions
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold">$50</div>
-                    <div className="text-sm text-muted-foreground">
-                      per hour
-                    </div>
-                  </div>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Customized learning plan</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>In-person or remote options</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Learning materials provided</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Flexible scheduling</span>
-                    </li>
-                  </ul>
-                  <div className="pt-4">
-                    <div className="text-xs text-muted-foreground text-center">
-                      Package deals available.
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              */}
-
-              {/* Group Training pricing card - Uncomment when tutoring services are offered
-              <Card className="relative">
-                <CardHeader className="text-center">
-                  <Users className="h-8 w-8 mx-auto text-primary" />
-                  <CardTitle className="text-2xl">Group Training</CardTitle>
-                  <CardDescription>
-                    Small groups & corporate training
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold">$40 + $10</div>
-                    <div className="text-sm text-muted-foreground">
-                      per person/hour
-                    </div>
-                  </div>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>2-8 participants optimal</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Custom curriculum available</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Group exercises and activities</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Take-home resources</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Follow-up support included</span>
-                    </li>
-                  </ul>
-                  <div className="pt-4">
-                    <div className="text-xs text-muted-foreground text-center">
-                      Minimum 1-hour sessions. Corporate rates available for
-                      larger groups.
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              */}
             </div>
           </div>
         </section>
 
-        {/* Services We Don't Offer Section */}
+        {/* Service Limitations Section */}
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Services We Don't Currently Offer
+                  Service Limitations
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  As a small home-based business, there are some services we're
-                  not able to provide at this time
+                  For ethical and equipment reasons, there are some services we
+                  are unable to provide
                 </p>
               </div>
             </div>
-            <div className="mx-auto max-w-2xl py-12">
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3">
-                  <XCircle className="h-5 w-5 text-muted-foreground" />
-                  <span className="text-lg">Microsoldering</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <XCircle className="h-5 w-5 text-muted-foreground" />
-                  <span className="text-lg">
-                    Services requiring specialized tools we don't have
-                  </span>
-                </li>
-              </ul>
+            <div className="mx-auto grid max-w-4xl gap-6 py-12 md:grid-cols-2 lg:gap-8">
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center space-x-2">
+                    <KeyRound className="h-6 w-6 text-destructive" />
+                    <CardTitle>Account &amp; Security Bypass</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center gap-2">
+                      <XCircle className="h-4 w-4 text-muted-foreground" />
+                      <span>Password bypass</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <XCircle className="h-4 w-4 text-muted-foreground" />
+                      <span>BIOS password removal</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <XCircle className="h-4 w-4 text-muted-foreground" />
+                      <span>Apple ID or iCloud bypass</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <XCircle className="h-4 w-4 text-muted-foreground" />
+                      <span>Microsoft account unlocking</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <XCircle className="h-4 w-4 text-muted-foreground" />
+                      <span>Security lock removal</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center space-x-2">
+                    <AlertTriangle className="h-6 w-6 text-destructive" />
+                    <CardTitle>Device Ownership Concerns</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Services will be declined if device ownership cannot be
+                    reasonably verified. This policy exists to protect both our
+                    customers and the community.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center space-x-2">
+                    <Cpu className="h-6 w-6 text-destructive" />
+                    <CardTitle>Specialized Hardware Repairs</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center gap-2">
+                      <XCircle className="h-4 w-4 text-muted-foreground" />
+                      <span>Micro-soldering</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <XCircle className="h-4 w-4 text-muted-foreground" />
+                      <span>Logic board / motherboard repair</span>
+                    </li>
+                    {/* <li className="flex items-center gap-2">
+                      <XCircle className="h-4 w-4 text-muted-foreground" />
+                      <span>Smartphone screen replacement</span>
+                    </li> */}
+                    <li className="flex items-center gap-2">
+                      <XCircle className="h-4 w-4 text-muted-foreground" />
+                      <span>Manufacturer-restricted repairs</span>
+                    </li>
+                  </ul>
+                  <p className="text-xs text-muted-foreground mt-3">
+                    We can refer you to a specialist for these services.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center space-x-2">
+                    <HardDrive className="h-6 w-6 text-destructive" />
+                    <CardTitle>Advanced Data Recovery</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center gap-2">
+                      <XCircle className="h-4 w-4 text-muted-foreground" />
+                      <span>Physically damaged drives</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <XCircle className="h-4 w-4 text-muted-foreground" />
+                      <span>Failed SSD controllers</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <XCircle className="h-4 w-4 text-muted-foreground" />
+                      <span>Cleanroom recovery</span>
+                    </li>
+                  </ul>
+                  <p className="text-xs text-muted-foreground mt-3">
+                    We can refer you to a data recovery specialist.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
 
-        {/* About Section */}
-        <section id="about" className="w-full py-12 mx-16 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                    Why Choose Tech Services Nano?
-                  </h2>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    With years of experience in the IT industry, we provide
-                    reliable, efficient, and cost-effective solutions for all
-                    your technology challenges.
-                  </p>
-                </div>
-                <ul className="grid gap-2 py-4">
-                  {features.map((feature, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button asChild>
-                    <Link href="#contact">Get Started Today</Link>
-                  </Button>
-                  <Button variant="outline" asChild>
-                    <Link href="tel:+1234567890">Call Now</Link>
-                  </Button>
-                </div>
+        {/* 90-Day Service Guarantee Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <BadgeCheck className="h-12 w-12 text-primary" />
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  90-Day Service Guarantee
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  All repairs are tested before return and backed by our 90-day
+                  warranty on parts and labor for the specific repair performed
+                </p>
               </div>
-              <div className="flex items-center justify-center">
-                <div className="grid gap-4 p-8 bg-muted rounded-lg">
-                  <div className="text-center space-y-2">
-                    <h3 className="text-2xl font-bold">Nadine Ibrahim</h3>
-                    <img
-                      src="./NanoProfileLogo.jpg"
-                      alt="Nadine Ibrahim"
-                      className="h-64 w-64 mx-auto rounded-3xl"
-                    />
-                    <p className="text-muted-foreground">
-                      "Nano" has a strong background in education and
-                      technology. She is a life long learner who always helps
-                      others and can easily explain almost any topic.
-                    </p>
-                  </div>
-                </div>
+            </div>
+            <div className="mx-auto grid max-w-4xl gap-8 py-12 md:grid-cols-2">
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Covered</h3>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    <span>
+                      Same issue recurring within 90 days of repair
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    <span>Parts installed during the original repair</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    <span>Labor related to the original repair</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Not Covered</h3>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2">
+                    <XCircle className="h-4 w-4 text-muted-foreground" />
+                    <span>New physical damage</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <XCircle className="h-4 w-4 text-muted-foreground" />
+                    <span>Unrelated software issues</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <XCircle className="h-4 w-4 text-muted-foreground" />
+                    <span>Post-service malware infections</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <XCircle className="h-4 w-4 text-muted-foreground" />
+                    <span>Environmental or electrical damage</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <XCircle className="h-4 w-4 text-muted-foreground" />
+                    <span>Normal hardware wear and tear</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -573,12 +675,12 @@ export default function TechServicesNano() {
         <section id="contact" className="py-20 px-4 bg-white">
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h3 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 Get In Touch
-              </h3>
+              </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Ready to solve your IT challenges? Contact us today for a free
-                consultation and quote.
+                basic diagnostic and quote.
               </p>
             </div>
 
@@ -593,10 +695,10 @@ export default function TechServicesNano() {
                 </CardHeader>
                 <CardContent>
                   <a
-                    href="mailto:nano@techservicesnano.com"
+                    href="mailto:techservicesnano@gmail.com"
                     className="text-lg font-semibold text-blue-600 hover:underline"
                   >
-                    nano@techservicesnano.com
+                    techservicesnano@gmail.com
                   </a>
                 </CardContent>
               </Card>
@@ -652,7 +754,7 @@ export default function TechServicesNano() {
       {/* Footer */}
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-muted-foreground">
-          © 2025 Nadine Ibrahim. All rights reserved.
+          &copy; 2026 Nadine Ibrahim. All rights reserved.
         </p>
       </footer>
     </div>
