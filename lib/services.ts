@@ -21,6 +21,12 @@ export const services: Service[] = [
     description: "Restore your computer to peak performance with a comprehensive tune-up.",
   },
   {
+    id: "console-repair",
+    title: "Console Repair",
+    durationMinutes: 120,
+    description: "Diagnostics and repair for game consoles and home entertainment devices.",
+  },
+  {
     id: "malware-removal",
     title: "Basic Malware Removal",
     durationMinutes: 90,
@@ -37,6 +43,12 @@ export const services: Service[] = [
     title: "New Computer Setup",
     durationMinutes: 90,
     description: "Get your new computer ready to use right out of the box.",
+  },
+  {
+    id: "mobile-repair",
+    title: "Mobile & Device Repair",
+    durationMinutes: 90,
+    description: "Screen repair, battery replacement, charging port repair, and mobile troubleshooting for phones and tablets.",
   },
   {
     id: "software-install",

@@ -65,6 +65,17 @@ export default function TechServicesNano() {
       ],
     },
     {
+      icon: <Cpu className="h-8 w-8" />,
+      title: "Console Repair",
+      description: "Diagnostics and repair for game consoles and home entertainment devices.",
+      includes: [
+        "Console diagnostics and troubleshooting",
+        "Controller and accessory repair",
+        "Firmware updates and software fixes",
+        "Data transfer and saved-game backup",
+      ],
+    },
+    {
       icon: <ShieldAlert className="h-8 w-8" />,
       title: "Basic Malware Removal",
       description:
@@ -98,6 +109,17 @@ export default function TechServicesNano() {
         "Software installation",
         "Email configuration",
         "Data migration assistance",
+      ],
+    },
+    {
+      icon: <Phone className="h-8 w-8" />,
+      title: "Mobile & Device Repair",
+      description: "Screen repair, battery replacement, charging port repair, and mobile troubleshooting for phones and tablets.",
+      includes: [
+        "Screen and glass repair",
+        "Battery replacement",
+        "Charging and connectivity repair",
+        "iOS and Android software troubleshooting",
       ],
     },
     {
