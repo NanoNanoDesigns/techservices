@@ -8,12 +8,9 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
-  // Brain,
   Monitor,
   Wrench,
   Download,
-  // Globe,
-  // ShieldCheck,
   Users,
   Phone,
   Mail,
@@ -44,6 +41,17 @@ import { Header } from "@/components/header";
 
 export default function TechServicesNano() {
   const services = [
+    {
+      icon: <Monitor className="h-8 w-8" />,
+      title: "IT Services for Businesses",
+      description: "IT infrastructure repair, maintenance, and consultation.",
+      includes: [
+        "Network and workstation troubleshooting",
+        "Routine maintenance and updates",
+        "Infrastructure assessment and consultation",
+        "Small-business IT support planning",
+      ],
+    },
     {
       icon: <Gauge className="h-8 w-8" />,
       title: "Computer Tune-Up / Performance Optimization",
@@ -167,7 +175,6 @@ export default function TechServicesNano() {
       <Header />
 
       <main className="flex-1">
-        {/* Hero Section */}
         <section className="w-full py-6 md:py-12 lg:py-16 xl:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
@@ -209,7 +216,6 @@ export default function TechServicesNano() {
           </div>
         </section>
 
-        {/* Our Approach Section */}
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -227,9 +233,7 @@ export default function TechServicesNano() {
               <div className="flex gap-4">
                 <Heart className="h-8 w-8 text-primary shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-lg font-semibold">
-                    Ethical &amp; Practical
-                  </h3>
+                  <h3 className="text-lg font-semibold">Ethical &amp; Practical</h3>
                   <p className="text-muted-foreground">
                     We recommend only the repairs you actually need. No
                     upselling, no unnecessary services, no pressure.
@@ -239,9 +243,7 @@ export default function TechServicesNano() {
               <div className="flex gap-4">
                 <Home className="h-8 w-8 text-primary shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-lg font-semibold">
-                    Home &amp; Small-Business Focused
-                  </h3>
+                  <h3 className="text-lg font-semibold">Home &amp; Small-Business Focused</h3>
                   <p className="text-muted-foreground">
                     We specialize in helping everyday users and small businesses
                     with practical, affordable tech support.
@@ -251,9 +253,7 @@ export default function TechServicesNano() {
               <div className="flex gap-4">
                 <ArrowUpRight className="h-8 w-8 text-primary shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-lg font-semibold">
-                    Honest Referrals
-                  </h3>
+                  <h3 className="text-lg font-semibold">Honest Referrals</h3>
                   <p className="text-muted-foreground">
                     If a job is outside our scope, we&apos;ll tell you upfront
                     and refer you to a specialist who can help.
@@ -274,11 +274,7 @@ export default function TechServicesNano() {
           </div>
         </section>
 
-        {/* Service Menu */}
-        <section
-          id="services"
-          className="w-full py-12 md:py-24 lg:py-32 bg-muted/50"
-        >
+        <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -297,9 +293,7 @@ export default function TechServicesNano() {
                   <CardHeader>
                     <div className="flex items-center space-x-2">
                       <div className="text-primary">{service.icon}</div>
-                      <CardTitle className="text-lg">
-                        {service.title}
-                      </CardTitle>
+                      <CardTitle className="text-lg">{service.title}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -322,8 +316,6 @@ export default function TechServicesNano() {
           </div>
         </section>
 
-
-        {/* Diagnostic Services Section */}
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -341,18 +333,12 @@ export default function TechServicesNano() {
               <Card>
                 <CardHeader className="text-center">
                   <Stethoscope className="h-8 w-8 mx-auto text-primary" />
-                  <CardTitle className="text-2xl">
-                    Free Basic Diagnostic
-                  </CardTitle>
+                  <CardTitle className="text-2xl">Free Basic Diagnostic</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-green-600">
-                      Free
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      up to 15 minutes
-                    </div>
+                    <div className="text-3xl font-bold text-green-600">Free</div>
+                    <div className="text-sm text-muted-foreground">up to 15 minutes</div>
                   </div>
                   <p className="text-muted-foreground text-center">
                     Initial inspection to assess the issue and provide a
@@ -363,9 +349,7 @@ export default function TechServicesNano() {
               <Card>
                 <CardHeader className="text-center">
                   <Clock className="h-8 w-8 mx-auto text-primary" />
-                  <CardTitle className="text-2xl">
-                    Advanced Diagnostic
-                  </CardTitle>
+                  <CardTitle className="text-2xl">Advanced Diagnostic</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <ul className="space-y-2 text-sm">
@@ -392,11 +376,7 @@ export default function TechServicesNano() {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section
-          id="pricing"
-          className="w-full py-12 md:py-24 lg:py-32 bg-muted/50"
-        >
+        <section id="pricing" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -413,19 +393,13 @@ export default function TechServicesNano() {
               <Card className="relative">
                 <CardHeader className="text-center">
                   <Wrench className="h-8 w-8 mx-auto text-primary" />
-                  <CardTitle className="text-2xl">
-                    Diagnostics &amp; Repairs
-                  </CardTitle>
-                  <CardDescription>
-                    One rate for everything we do
-                  </CardDescription>
+                  <CardTitle className="text-2xl">Diagnostics &amp; Repairs</CardTitle>
+                  <CardDescription>One rate for everything we do</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="text-center">
                     <div className="text-3xl font-bold">$50</div>
-                    <div className="text-sm text-muted-foreground">
-                      per hour
-                    </div>
+                    <div className="text-sm text-muted-foreground">per hour</div>
                   </div>
                   <div className="rounded-lg bg-primary/10 p-4 text-sm text-center">
                     <span className="font-medium">
@@ -456,8 +430,7 @@ export default function TechServicesNano() {
                   </ul>
                   <div className="pt-2">
                     <div className="text-xs text-muted-foreground text-center">
-                      Minimum 1 hour charge. Travel fee may apply for on-site
-                      service.
+                      Minimum 1 hour charge. Travel fee may apply for on-site service.
                     </div>
                   </div>
                 </CardContent>
@@ -466,7 +439,6 @@ export default function TechServicesNano() {
           </div>
         </section>
 
-        {/* Service Limitations Section */}
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -545,10 +517,6 @@ export default function TechServicesNano() {
                       <XCircle className="h-4 w-4 text-muted-foreground" />
                       <span>Logic board / motherboard repair</span>
                     </li>
-                    {/* <li className="flex items-center gap-2">
-                      <XCircle className="h-4 w-4 text-muted-foreground" />
-                      <span>Smartphone screen replacement</span>
-                    </li> */}
                     <li className="flex items-center gap-2">
                       <XCircle className="h-4 w-4 text-muted-foreground" />
                       <span>Manufacturer-restricted repairs</span>
@@ -590,7 +558,6 @@ export default function TechServicesNano() {
           </div>
         </section>
 
-        {/* 90-Day Service Guarantee Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -611,9 +578,7 @@ export default function TechServicesNano() {
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span>
-                      Same issue recurring within 90 days of repair
-                    </span>
+                    <span>Same issue recurring within 90 days of repair</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-green-600" />
@@ -654,7 +619,6 @@ export default function TechServicesNano() {
           </div>
         </section>
 
-        {/* Contact Section */}
         <section id="contact" className="py-20 px-4 bg-white">
           <div className="container mx-auto">
             <div className="text-center mb-16">
@@ -677,10 +641,7 @@ export default function TechServicesNano() {
                   <CardDescription>Get in touch via email</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <a
-                    href="mailto:techservicesnano@gmail.com"
-                    className="text-lg font-semibold text-blue-600 hover:underline"
-                  >
+                  <a href="mailto:techservicesnano@gmail.com" className="text-lg font-semibold text-blue-600 hover:underline">
                     techservicesnano@gmail.com
                   </a>
                 </CardContent>
@@ -700,31 +661,20 @@ export default function TechServicesNano() {
                   </p>
                 </CardContent>
               </Card>
+
               <Card className="text-center border-0 shadow-lg">
                 <CardHeader>
                   <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="w-8 h-8 text-orange-600" />
                   </div>
                   <CardTitle>Follow</CardTitle>
-                  <CardDescription>
-                    Stay connected on social media
-                  </CardDescription>
+                  <CardDescription>Stay connected on social media</CardDescription>
                 </CardHeader>
                 <CardContent className="space-x-4">
-                  <a
-                    href="https://www.linkedin.com/in/nadine-ibrahim-1a794646/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-lg font-semibold text-orange-600 hover:underline"
-                  >
+                  <a href="https://www.linkedin.com/in/nadine-ibrahim-1a794646/" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-orange-600 hover:underline">
                     LinkedIn
                   </a>
-                  <a
-                    href="https://github.com/NanoNanoDesigns"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-lg font-semibold text-orange-600 hover:underline"
-                  >
+                  <a href="https://github.com/NanoNanoDesigns" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-orange-600 hover:underline">
                     GitHub
                   </a>
                 </CardContent>
@@ -734,7 +684,6 @@ export default function TechServicesNano() {
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-muted-foreground">
           &copy; 2026 Nadine Ibrahim. All rights reserved.
